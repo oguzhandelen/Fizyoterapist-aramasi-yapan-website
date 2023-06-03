@@ -1,0 +1,46 @@
+
+
+
+<html>
+<head>
+    <title></title>
+    <link href= "/public/css/ara.css" rel="stylesheet" type="text/css" />
+</head>
+ 
+<body>
+    <ul>
+        <% doctors.forEach(function(doctors){ %> 
+            <div class="container" >
+                <form id="contact" >
+                             <h1> FİZYOTERAPİST</h1>
+                          <div class="form-control1">
+                            <h3>   <%= doctors.name %></h3>
+                          </div>
+                          <div class="form-control2">
+                             <h3>   <%= doctors.surname %></h3>
+                          </div>
+                          <div class="form-control3">
+                             <h3>  <%= doctors.telephone %></h3>
+                          </div>
+                          <div class="form-control4">
+                            <h3>  <%= doctors.location %></h3>
+                          </div>
+                          <div class="form-control5">
+                             <h3> <%= doctors.certificate %></h3>
+                          </div>
+                          <div class="form-control6">
+                            <h3 style="color: red;"><%= doctors.statement %></h3>
+                         </div>
+
+ 
+                </form>
+            </div>
+           <% }); %>
+         </ul>
+</body>
+
+<script src="/app.js"> </script>
+<script src="../models/doctors.js"> </script>
+
+
+</html>
